@@ -34,6 +34,7 @@ final class MainViewController: UIViewController {
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         noResultsLabel.isHidden = recipes?.count != 0
+        recipesTableView.isHidden = recipes?.count == 0
         return recipes?.count ?? 0
     }
     
@@ -73,6 +74,7 @@ extension MainViewController: UISearchBarDelegate {
         }
         recipes = originalRecipes?.filter( { ($0.title?.contains(searchText) ?? false) })
         noResultsLabel.isHidden = recipes?.count != 0
+        recipesTableView.isHidden = recipes?.count == 0
         recipesTableView.reloadData()
     }
     
