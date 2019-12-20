@@ -72,20 +72,29 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="gco-C9-iPL"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtK-cN-xdC">
+                                <rect key="frame" x="121.5" y="429" width="171.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EkD-FE-ZCf" secondAttribute="trailing" id="798-Ru-dO4"/>
+                            <constraint firstItem="EtK-cN-xdC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CWb-75-BW4"/>
                             <constraint firstItem="A9P-FK-Kch" firstAttribute="top" secondItem="EkD-FE-ZCf" secondAttribute="bottom" constant="-1" id="Mfb-kn-k1v"/>
                             <constraint firstItem="A9P-FK-Kch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZOW-t7-z6l"/>
                             <constraint firstAttribute="bottom" secondItem="A9P-FK-Kch" secondAttribute="bottom" id="aKO-wV-58h"/>
                             <constraint firstItem="A9P-FK-Kch" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fYi-0J-b0P"/>
+                            <constraint firstItem="EtK-cN-xdC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gvW-0b-gqE"/>
                             <constraint firstAttribute="top" secondItem="EkD-FE-ZCf" secondAttribute="top" id="hr3-Zs-Ol7"/>
                             <constraint firstItem="EkD-FE-ZCf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oOC-8z-uz5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="noResultsLabel" destination="EtK-cN-xdC" id="9nZ-a4-1Vp"/>
                         <outlet property="recipesSearchBar" destination="Gtb-yq-yU1" id="1LU-4W-tjM"/>
                         <outlet property="recipesTableView" destination="A9P-FK-Kch" id="jMQ-eg-HzM"/>
                     </connections>
@@ -139,7 +148,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrB-XC-2Q2">
                                 <rect key="frame" x="0.0" y="89" width="414" height="807"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4El-Qa-ewz">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="4El-Qa-ewz">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="2GQ-Y1-vbl"/>
@@ -149,19 +158,19 @@
                                         <rect key="frame" x="8" y="258" width="398" height="60"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unfilledStar" translatesAutoresizingMaskIntoConstraints="NO" id="zoO-kx-WLU">
-                                                <rect key="frame" x="0.0" y="0.0" width="79.500000000000028" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="79.5" height="60"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unfilledStar" translatesAutoresizingMaskIntoConstraints="NO" id="CNZ-cM-hib">
-                                                <rect key="frame" x="79.5" y="0.0" width="79.500000000000028" height="60"/>
+                                                <rect key="frame" x="79.5" y="0.0" width="79.5" height="60"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unfilledStar" translatesAutoresizingMaskIntoConstraints="NO" id="0Gr-Pq-pRw">
-                                                <rect key="frame" x="159" y="0.0" width="80.000000000000028" height="60"/>
+                                                <rect key="frame" x="159" y="0.0" width="80" height="60"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unfilledStar" translatesAutoresizingMaskIntoConstraints="NO" id="W5c-cf-ssG">
-                                                <rect key="frame" x="239" y="0.0" width="79.500000000000028" height="60"/>
+                                                <rect key="frame" x="239" y="0.0" width="79.5" height="60"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unfilledStar" translatesAutoresizingMaskIntoConstraints="NO" id="K9t-Ac-RZl">
-                                                <rect key="frame" x="318.5" y="0.0" width="79.500000000000028" height="60"/>
+                                                <rect key="frame" x="318.5" y="0.0" width="79.5" height="60"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -223,6 +232,7 @@
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
+        <image name="detailPlaceholder" width="1500" height="501"/>
         <image name="unfilledStar" width="119.5" height="114.5"/>
     </resources>
 </document>

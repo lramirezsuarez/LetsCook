@@ -12,6 +12,7 @@ final class MainViewController: UIViewController {
     
     @IBOutlet weak var recipesSearchBar: UISearchBar!
     @IBOutlet weak var recipesTableView: UITableView!
+    @IBOutlet weak var noResultsLabel: UILabel!
     
     var recipes: [Recipe]?
     var originalRecipes: [Recipe]?
@@ -32,6 +33,7 @@ final class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        noResultsLabel.isHidden = recipes?.count != 0
         return recipes?.count ?? 0
     }
     
@@ -44,7 +46,6 @@ extension MainViewController: UITableViewDataSource {
         return cell
     }
     
-    
 }
 
 extension MainViewController: UITableViewDelegate {
@@ -56,7 +57,6 @@ extension MainViewController: UITableViewDelegate {
         }
         detailViewController.recipeId = recipe.id
         present(detailViewController, animated: true, completion: nil)
-//        print("Selected the recipe \(recipe.id ?? 0) called \(recipe.title ?? "Nil title")")
     }
 }
 
@@ -72,6 +72,7 @@ extension MainViewController: UISearchBarDelegate {
             return
         }
         recipes = originalRecipes?.filter( { ($0.title?.contains(searchText) ?? false) })
+        noResultsLabel.isHidden = recipes?.count != 0
         recipesTableView.reloadData()
     }
     
