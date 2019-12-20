@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct DataRequest {
+protocol DataRequestProtocol {
+    static func loadRecipes(completion: @escaping (([Recipe]) -> Void))
+    static func loadRecipe(withId id: Int, completion: @escaping ((RecipeDetail) -> Void))
+}
+
+struct DataRequest: DataRequestProtocol {
     static func loadRecipes(completion: @escaping (([Recipe]) -> Void)) {
         loadRecipesFromNetwork { recipes in
             guard let networkRecipes = recipes else {

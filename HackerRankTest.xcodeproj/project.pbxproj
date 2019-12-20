@@ -10,6 +10,8 @@
 		2E98BFF023AD4C5900763666 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E98BFEF23AD4C5900763666 /* DetailViewController.swift */; };
 		2E98BFF223AD5BDF00763666 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E98BFF123AD5BDF00763666 /* RecipeDetail.swift */; };
 		2E98BFF523AD5E4600763666 /* ImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E98BFF423AD5E4600763666 /* ImageView+Download.swift */; };
+		2E98BFF723AD6CCB00763666 /* MockDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E98BFF623AD6CCB00763666 /* MockDataRequest.swift */; };
+		2E98BFF923AD6E3600763666 /* DataRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E98BFF823AD6E3600763666 /* DataRequestTests.swift */; };
 		2ED1971223AD2FB300989F57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1971123AD2FB300989F57 /* AppDelegate.swift */; };
 		2ED1971423AD2FB300989F57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1971323AD2FB300989F57 /* SceneDelegate.swift */; };
 		2ED1971623AD2FB300989F57 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1971523AD2FB300989F57 /* MainViewController.swift */; };
@@ -35,6 +37,8 @@
 		2E98BFEF23AD4C5900763666 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2E98BFF123AD5BDF00763666 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		2E98BFF423AD5E4600763666 /* ImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Download.swift"; sourceTree = "<group>"; };
+		2E98BFF623AD6CCB00763666 /* MockDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataRequest.swift; sourceTree = "<group>"; };
+		2E98BFF823AD6E3600763666 /* DataRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestTests.swift; sourceTree = "<group>"; };
 		2ED1970E23AD2FB300989F57 /* HackerRankTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerRankTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED1971123AD2FB300989F57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ED1971323AD2FB300989F57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 			children = (
 				2ED1972823AD2FB700989F57 /* HackerRankTestTests.swift */,
 				2ED1972A23AD2FB700989F57 /* Info.plist */,
+				2E98BFF623AD6CCB00763666 /* MockDataRequest.swift */,
+				2E98BFF823AD6E3600763666 /* DataRequestTests.swift */,
 			);
 			path = HackerRankTestTests;
 			sourceTree = "<group>";
@@ -278,7 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E98BFF923AD6E3600763666 /* DataRequestTests.swift in Sources */,
 				2ED1972923AD2FB700989F57 /* HackerRankTestTests.swift in Sources */,
+				2E98BFF723AD6CCB00763666 /* MockDataRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
